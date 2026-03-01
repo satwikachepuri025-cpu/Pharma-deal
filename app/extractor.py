@@ -6,7 +6,7 @@ from playwright.sync_api import sync_playwright
 def fetch_with_playwright(url):
     try:
         with sync_playwright() as p:
-            browser = p.chromium.launch()
+            browser = p.chromium.launch(headless=True)
             page = browser.new_page()
             page.goto(url, timeout=15000)
             html = page.content()
@@ -21,7 +21,6 @@ def extract_article_text(url):
     try:
         print(f"\n🔗 Original URL: {url}")
 
-        # Step 1: Try cloudscraper (fast)
         scraper = cloudscraper.create_scraper(
             browser={
                 "browser": "chrome",
@@ -40,16 +39,13 @@ def extract_article_text(url):
         if response.status_code == 200 and response.text:
             html_content = response.text
         else:
-            print("⚠ cloudscraper blocked or empty response — using Playwright fallback.")
+            print("⚠ cloudscraper blocked — using Playwright fallback.")
             html_content = fetch_with_playwright(url)
 
         if not html_content:
             print("❌ Failed to retrieve HTML content.")
             return None
 
-        print(f"➡ First 300 chars of page:\n{html_content[:300]}")
-
-        # Step 2: Extract clean text
         text = trafilatura.extract(html_content)
 
         if not text:
@@ -57,7 +53,6 @@ def extract_article_text(url):
             return None
 
         print(f"➡ Extracted text length: {len(text)}")
-
         return text
 
     except Exception as e:

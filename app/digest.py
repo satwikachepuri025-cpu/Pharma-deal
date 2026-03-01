@@ -3,6 +3,7 @@ import json
 import pandas as pd
 from app.config import MAX_DEALS
 
+
 def save_digest(deals):
 
     os.makedirs("output", exist_ok=True)
@@ -11,7 +12,8 @@ def save_digest(deals):
     unique = {}
 
     for deal in valid_deals:
-        key = (deal["company_a"], deal["company_b"])
+        # Order-independent deduplication
+        key = tuple(sorted([deal["company_a"], deal["company_b"]]))
         if key not in unique:
             unique[key] = deal
 

@@ -4,7 +4,7 @@
         "company_b": "SystImmune",
         "deal_type": "Collaboration/Licensing",
         "deal_value": "Not disclosed",
-        "deal_summary": "Bristol Myers Squibb and SystImmune are collaborating on the development of BL-B01D1, a bispecific antibody-drug conjugate (ADC) targeting EGFR and HER3 for breast cancer. The article reports on promising Phase 1b trial results in China, showing the drug's efficacy in heavily pretreated patients with metastatic breast cancer. This appears to be part of an ongoing partnership between the companies focused on advancing this ADC candidate.",
+        "deal_summary": "Bristol Myers Squibb and SystImmune have entered into a collaboration to develop and commercialize BL-B01D1, a bispecific antibody-drug conjugate (ADC) targeting EGFR and HER3 for breast cancer and other solid tumors. The partnership includes clinical development and commercialization rights, with Bristol Myers Squibb making an upfront payment and additional milestone payments.",
         "is_deal": true,
         "article_url": "https://www.biopharmadive.com/news/bristol-myers-systimmune-adc-breast-cancer-results-china/813206/"
     },
@@ -12,8 +12,8 @@
         "company_a": "Eli Lilly",
         "company_b": "NVIDIA",
         "deal_type": "Technology Partnership",
-        "deal_value": "Undisclosed",
-        "deal_summary": "Eli Lilly announced a partnership with NVIDIA to deploy a supercomputer for drug discovery and development, focusing on escaping traditional pharma lifecycle constraints through advanced computing capabilities.",
+        "deal_value": "Not Disclosed",
+        "deal_summary": "Eli Lilly announced a partnership with NVIDIA to deploy NVIDIA's DGX SuperPOD supercomputing infrastructure to accelerate drug discovery and development, focusing on escaping traditional pharmaceutical lifecycle constraints through advanced AI and computational capabilities.",
         "is_deal": true,
         "article_url": "https://www.fiercepharma.com/biotech/lilly-debuts-nvidia-supercomputer-fanfare-and-focus-escaping-traditional-pharma-lifecycle"
     }
