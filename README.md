@@ -245,7 +245,7 @@ playwright install
 Create a `.env` file in the project root:
 
 ```bash
-"DEEPSEEK_API_KEY=your_api_key_here" 
+DEEPSEEK_API_KEY=your_api_key_here
 ```
 
 ## Project Structure
