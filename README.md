@@ -269,8 +269,7 @@ SCRAPPER_PIPELINE/
 │   └── pipeline.log
 │
 ├── output/
-├── venv/
-├── .env
+├── .env.example    # example template for env
 ├── README.md
 └── requirements.txt
 ```
