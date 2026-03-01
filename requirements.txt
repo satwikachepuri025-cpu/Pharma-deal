@@ -1,0 +1,9 @@
+feedparser
+requests
+beautifulsoup4
+trafilatura
+python-dotenv
+schedule
+pandas
+openai
+lxml_html_clean
