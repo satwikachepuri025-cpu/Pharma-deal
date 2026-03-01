@@ -127,6 +127,7 @@ The LLM performs:
 
 ### Enforced Output Schema
 
+```json
 {
   "company_a": "",
   "company_b": "",
@@ -136,12 +137,15 @@ The LLM performs:
   "is_deal": true,
   "article_url": ""
 }
+```
 
 If the article does not describe a deal:
 
-
-"is_deal": false
-
+```json
+{
+  "is_deal": false
+}
+```
 
 Key design decisions:
 
@@ -185,54 +189,64 @@ Supports:
 
 ### Production Mode
 
+```bash
 schedule.every().day.at("09:00").do(run_pipeline)
+```
 
 ### Testing Mode
 
-
+```bash
 schedule.every(1).minutes.do(run_pipeline)
-
+```
 
 Run scheduler:
 
-
+```bash
 python -m app.scheduler
-
+```
 
 Run pipeline once:
 
-
+```bash
 python -m app.main
+```
 
 ## Setup Instructions
 
 ### Clone Repository
 
+```bash
 git clone <repo_url>
 cd scrapper_pipeline
-
+```
 
 ### Create Virtual Environment
 
+```bash
 python -m venv venv
 source venv/bin/activate   # macOS/Linux
 venv\Scripts\activate      # Windows
-
+```
 
 ### Install Dependencies
 
+```bash
 pip install -r requirements.txt
+```
 
 ### Install Playwright Browsers
 
+```bash
 playwright install
-
+```
 
 ### Configure Environment Variables
 
 Create a `.env` file in the project root:
 
-DEEPSEEK_API_KEY=your_api_key_here
+```bash
+echo "DEEPSEEK_API_KEY=your_api_key_here" > .env
+```
 
 ## Project Structure
 
