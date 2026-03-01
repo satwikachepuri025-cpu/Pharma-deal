@@ -216,7 +216,7 @@ python -m app.main
 ### Clone Repository
 
 ```bash
-git clone <repo_url>
+git clone https://github.com/satwikachepuri025-cpu/Pharma-deal.git
 cd scrapper_pipeline
 ```
 
