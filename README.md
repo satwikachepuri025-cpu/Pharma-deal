@@ -310,6 +310,7 @@ This reflects a modern AI-assisted data pipeline approach.
 * Python 3.9+
 * requests
 * feedparser
+* trafilatura
 * beautifulsoup4
 * cloudscraper
 * playwright
